@@ -18,6 +18,29 @@ html {
   max-width: 960px;
 }
 
+.img-right{
+  float: right; 
+  border: 1px solid #ccc;
+  padding:5px;
+  border-radius: 5px;
+  margin: 10px 0px 10px 20px;
+}
+
+.img-left{
+  float: left; 
+  border: 1px solid #ccc;
+  padding:5px;
+  border-radius: 5px;
+  margin: 10px 20px 10px 0px;
+}
+
+.img-center{
+  display:block;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+}
 
 /*  -------------Responsive Images---------------  */
 
@@ -118,6 +141,68 @@ aside[role="complementary"]{
   background: #430086;
   color:#FFFFFF;
   padding: 40px 0;
+}
+
+#practice h2{
+  color:red;
+  border-bottom: 1px dotted #000000;
+}
+
+#practice a{
+  color:red;
+  }
+
+#practice a:link, #practice a:visited {
+    color: red;
+  }
+
+#practice h3{
+  border-left: 7.5px solid #000000;
+  padding: 5px 0 5px 7.5px;
+}
+
+table{
+  width:100%;
+  border: 1px solid #c0c0c0;
+  border-collapse:collapse;
+  }
+
+caption{
+  font-weight: bold;
+  margin: 10px;
+  font-size:1.5rem;
+  }
+
+tr:nth-child(even){
+  background-color: rgba(0,0,0, 0.1);; 
+  }
+
+td:nth-child(n+2) {
+  text-align: right;
+} 
+
+tr:hover{
+  background: rgba(0,0,0,0.3);
+}
+
+th{
+  background-color: #5c00b9;
+  color:#FFFFFF;
+  padding:7.5px;
+  }
+
+
+td{
+  border: 1px solid #c0c0c0;
+  padding: 10px 5px;
+  }
+
+#practice ol{
+  list-style-type: lower-roman;
+}
+
+#practice ul ul{
+  color:red;
 }
 
 aside .container{
