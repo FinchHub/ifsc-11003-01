@@ -144,16 +144,16 @@ aside[role="complementary"]{
 }
 
 #practice h2{
-  color:red;
+  color:#5C00B9;
   border-bottom: 1px dotted #000000;
 }
 
 #practice a{
-  color:red;
+  color:#5532FF;
   }
 
 #practice a:link, #practice a:visited {
-    color: red;
+    color: 5C00B9;
   }
 
 #practice h3{
@@ -202,7 +202,7 @@ td{
 }
 
 #practice ul ul{
-  color:red;
+  color:#5c00b9;
 }
 
 #practice dt {
