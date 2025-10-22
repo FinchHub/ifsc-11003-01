@@ -46,7 +46,7 @@ body {
   background-color: #FFFFFF;
   font-family: "montserrat";
   margin:0;
-
+  background-color: #F0EFF0;
 }
 
 
@@ -65,7 +65,7 @@ header.primary::before {
   position:absolute;
   inset:0;
   background-image: url("../img/melt.svg");
-  opacity:0.2;
+  opacity:0.15;
   z-index: -1;
 }
 
