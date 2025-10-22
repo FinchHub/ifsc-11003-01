@@ -96,9 +96,6 @@ nav > ul > li {
   flex: 1 1 40px;
 }
 
-#position-lab a{
-  margin-bottom: 50px;
-}
 
 nav ul li ul li{
   margin-top: 5px;
@@ -108,3 +105,36 @@ nav a{
   color:#5c00b9;
 }
 
+#position-lab {
+  width:100%;
+  border: 1px solid #c0c0c0;
+  margin: auto auto;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+#position-lab caption{
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+#position-lab th {
+  background: #000;
+  color: #FFF;
+  font-size: 1.2rem;
+}
+
+#position-lab tr,
+#position-lab td {
+  border: 1px solid #c0c0c0;
+  padding: 5px 0px;
+}
+
+#position-lab tr:nth-child(even){
+  background-color: rgba(0,0,0,.1);
+}
+
+#position-lab td:hover {
+  background-color: rgba(0,0,0,.2);
+}
