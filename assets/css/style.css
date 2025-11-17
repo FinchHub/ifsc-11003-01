@@ -105,7 +105,7 @@ nav a{
   color:#5c00b9;
 }
 
-#position-lab, #grid-lab{
+#position-lab, #grid-lab, #final-project{
   width:100%;
   border: 1px solid #c0c0c0;
   margin: auto auto;
@@ -114,14 +114,16 @@ nav a{
 }
 
 #position-lab caption,
-#grid-lab caption {
+#grid-lab caption,
+#final-project caption {
   font-weight: bold;
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
 
 #position-lab th,
-#grid-lab th {
+#grid-lab th,
+#final-project th {
   background: #000;
   color: #FFF;
   font-size: 1.2rem;
@@ -130,21 +132,25 @@ nav a{
 #position-lab tr,
 #grid-lab tr,
 #position-lab td,
-#grid-lab td {
+#grid-lab td,
+#final-project tr,
+#final-project td {
   border: 1px solid #c0c0c0;
   padding: 5px 0px;
 }
 
 #position-lab tr:nth-child(even),
-#grid-lab tr:nth-child(even) {
+#grid-lab tr:nth-child(even),
+#final-project tr:nth-child(even) {
   background-color: rgba(0,0,0,.1);
 }
 
 #position-lab td:hover,
-#grid-lab td:hover {
+#grid-lab td:hover,
+#final-project td:hover {
   background-color: rgba(0,0,0,.2);
 }
 
-#grid-lab {
+#grid-lab, #final-project {
   margin-top: 30px;
 }
