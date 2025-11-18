@@ -56,14 +56,15 @@ body {
 nav {
   position: sticky;
   top: 0;
-  display: grid;
-  grid-template-columns: auto 5fr auto;
+  display: flex;
+  justify-content: space-between;
   background-color: #515151;
+  padding: 0 20px;
 }
 
 nav figure {
   margin: 0;
-  padding: 15px 20px;
+  padding: 15px 0px;
 }
 
 nav img {
@@ -87,7 +88,7 @@ nav ul a {
 }
 
 nav button {
-  margin: auto 20px;
+  margin: auto 0px;
   padding: 0px 8px;
   height: 80px;
   max-height: 50px;
@@ -103,4 +104,99 @@ nav button a {
 }
 
 section#hero {
+  background-color: black;
+}
+
+/* rest of body */
+
+footer {
+  background-color: #515151;
+  padding: 20px 20px;
+}
+
+footer section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+}
+
+footer section .footer-left {
+  gap: 0px;
+  font-size: 1.5rem;
+  align-items: start;
+  margin-bottom: 30px;
+}
+
+footer section .footer-left h6 {
+  font-weight: 300;
+  font-size: 1.5rem;
+  text-align: left;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+footer section .footer-left h6:first-child {
+  margin-bottom: 5px;
+}
+
+footer section .footer-left h6:first-child,
+footer section .footer-right h2:first-child {
+  font-size: 1.7rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+footer section .footer-right h2:first-child {
+  margin-bottom: 5px;
+}
+
+footer section .footer-right {
+  gap: 0px;
+  font-size: 1.5rem;
+  align-items: end;
+}
+
+footer section .footer-right h2 {
+  margin: 0;
+}
+
+footer section .footer-right ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+footer section .footer-right ul li {
+  margin-bottom: 10px;
+  font-weight: 300; 
+  text-decoration: underline;
+}
+
+footer section .footer-right ul a{
+  text-decoration: none;
+  color: #FFF;
+}
+
+footer section section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 960px;
+}
+
+footer section .footer-bottom {
+  grid-column: 1 / -1;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1rem;
+  text-align: center;
+}
+
+footer section .footer-bottom h6 {
+  font-size: 1.0rem;
+  font-weight: 300;
+  margin: 10px;
+}
+
+footer section .footer-bottom h6 a {
+  color: #FFF;
 }
