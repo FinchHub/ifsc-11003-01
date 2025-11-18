@@ -41,15 +41,20 @@ html {
   padding: 5px;
 }
 
+/* --------- Responsive Images ---------- */
 
+img {
+  max-width: 100%;
+}
 
 /*  ------------- Global Styles ---------------  */
 
 body {
   font-family: "roboto";
   margin: 0;
-  color:white;
+  color:#000;
   background-color: #BBBBBB;
+  font-size: 1.2rem;
 }
 
 
@@ -107,11 +112,62 @@ section#hero {
   background-color: black;
 }
 
-/* rest of body */
+section#tagline h2{
+  text-align: center; 
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-transform:uppercase;
+  margin-bottom: 0;
+}
 
+section#tagline h3 {
+  text-align: center;
+  font-size: 1.0rem;
+  font-weight: 300;
+  margin-top: 5px;
+}
+
+/* rest of body */
+header.container {
+  text-align: center;
+  color: #FFF;
+  background: #515151;
+  border-radius: 3px;
+}
+
+header.container h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 10px 0px;
+}
+
+section#articles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+section#articles a {
+  color: #000;
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-decoration: underline;
+}
+
+section#articles article {
+  background-color: grey;
+  border-radius: 3px;
+}
+
+
+/* ------- Footer -------- */
 footer {
   background-color: #515151;
   padding: 20px 20px;
+  color: #FFF;
+  margin-top: 30px;
 }
 
 footer section {
