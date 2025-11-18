@@ -154,3 +154,17 @@ nav a{
 #grid-lab, #final-project {
   margin-top: 30px;
 }
+
+#position-lab td,
+#position-lab th,
+#grid-lab td,
+#grid-lab th {
+  width: 25%;
+}
+
+#final-project td,
+#final-project th {
+  width: 50%;
+}
+
+
