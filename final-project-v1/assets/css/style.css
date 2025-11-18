@@ -1,0 +1,79 @@
+
+/*  ---------------Box Sizing-----------------  */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*  -------------Utility Classes---------------  */
+.container {
+  width: 80vw;
+  margin: 40px auto;
+  max-width: 960px;
+}
+
+.img-right{
+  float: right; 
+  border: 1px solid #ccc;
+  padding:5px;
+  border-radius: 5px;
+  margin: 10px 0px 10px 20px;
+}
+
+.img-left{
+  float: left; 
+  border: 1px solid #ccc;
+  padding:5px;
+  border-radius: 5px;
+  margin: 10px 20px 10px 0px;
+}
+
+.img-center{
+  display:block;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+
+
+/*  ------------- Global Styles ---------------  */
+
+
+
+
+nav {
+  display: grid;
+  grid-template-columns: auto 5fr auto;
+  padding: 0 0;
+  background:red;
+}
+
+nav figure {
+  margin: 0;
+}
+
+nav img {
+  max-width: 220px;
+
+}
+
+nav ul {
+  display:flex;
+  gap: 2rem;
+  margin: auto auto;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #000;
+}
