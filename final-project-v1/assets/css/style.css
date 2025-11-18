@@ -45,28 +45,34 @@ html {
 
 /*  ------------- Global Styles ---------------  */
 
-
+body {
+  font-family: "roboto";
+  margin: 0;
+  color:white;
+  background-color: #BBBBBB;
+}
 
 
 nav {
+  position: sticky;
+  top: 0;
   display: grid;
   grid-template-columns: auto 5fr auto;
-  padding: 0 0;
-  background:red;
+  background-color: #515151;
 }
 
 nav figure {
   margin: 0;
+  padding: 15px 20px;
 }
 
 nav img {
-  max-width: 220px;
-
+  max-width: 180px;
 }
 
 nav ul {
   display:flex;
-  gap: 2rem;
+  gap: 4rem;
   margin: auto auto;
   padding: 0;
   list-style: none;
@@ -74,6 +80,27 @@ nav ul {
 
 nav ul a {
   text-decoration: none;
-  font-size: 1.3rem;
-  color: #000;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #FFF;
+}
+
+nav button {
+  margin: auto 20px;
+  padding: 0px 8px;
+  height: 80px;
+  max-height: 50px;
+  border-radius: 3px;
+  background-color: rgba(255,255,255,0.2);
+}
+
+nav button a {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+section#hero {
 }
