@@ -203,17 +203,23 @@ section#articles article {
   border-radius: 3px;
 }
 
-#service-1 {
-  position: relative;
-  height: auto;
+/* Could not get the image to fit the max width of container class
+*  for nearly two hours. Realized it's because I wasn't targeting
+*  figure before img. This was painful.*/
+
+.service-img figure img{
+  border-radius: 3px;
+  box-shadow: 5px 5px 8px;
 }
 
-#service-1 img{
-  display: block;
+.service-img figure {
+  width: 100%;
+  margin: auto auto;
+  position: relative;
 }
 
-section.service-content {
-  position: relative;
+.service-text {
+ 
 }
 
 /* ---------- Careers Page ---------- */
