@@ -113,11 +113,15 @@ nav button a, section#hero-content button a {
 section#hero {
   position: relative;
   box-shadow: 5px 5px 8px;
+  width:100%;
+  max-height: 80vh;
+  overflow: hidden;
 }
 
 section#hero img {
   border-radius: 3px;
   display:block;
+  height: auto;
 }
 
 section#hero-content {
@@ -126,7 +130,7 @@ section#hero-content {
   left: 2%;
   text-align: left;
   color: #FFF;
-  width: 35%;
+  max-width: 35%;
 }
 
 section#hero-content h1 {
@@ -138,8 +142,8 @@ section#hero-content h1 {
 
 section#hero-content button {
   background: rgba(255, 255, 255, 0.8);
-  position:absolute;
-  top: 135%;
+  position:relative;
+  margin-top: 1rem;
 }
 
 section#hero-content button a {
