@@ -46,10 +46,8 @@ body {
   background-color: #FFFFFF;
   font-family: "montserrat";
   margin:0;
-  background-color: #F0EFF0;
+  background-image: url("../img/bg.svg");
 }
-
-
 
 header.primary {
   position:relative;
@@ -58,51 +56,63 @@ header.primary {
   color: #FFF;
   text-align: center;
   padding: 20px 40px;
+  box-shadow: 0px 0px 8px #000;
 } 
+
+header.primary h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0px;
+  font-weight: 300;
+  text-shadow: 0px 0px 5px #000;
+}
+
+header.primary h2 {
+  font-weight: 500;
+  text-shadow: 0px 0px 5px #000;
+  margin-top: 5px;
+  font-size: 1.2rem;
+}
 
 header.primary::before {
   content:"";
   position:absolute;
   inset:0;
   background-image: url("../img/melt.svg");
-  opacity:0.15;
+  opacity:0.05;
   z-index: -1;
 }
 
-header h1 {
-  font-size: 2.8rem;
-  margin-bottom: 0px;
+#assignments, #positionlab, #gridlab, #finalproject {
+  background: rgba(255,255,255,0.4);
+  border-radius: 5px;
+  border: 1px solid #00000050;
+  box-shadow: 0px 3px 8px #000;
+  padding: 5px;
 } 
 
-header h2 {
-  margin-top: 5px;
+#assignments ul {
+  list-style-type: none;
+  padding: 0px 40px 20px 40px;
+}
+
+#assignments ul li {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  box-shadow: 0 5px 5px #000;
+  margin: 15px;
+  padding: 15px 10px;
+}
+
+#assignments ul li a {
+  color: #7F6599;
+  font-weight: 500;
   font-size: 1.2rem;
 }
 
-#content h3 {
+h3 {
+  font-weight: 300;
+  font-size: 1.5rem;
   text-align: center;
-}
-
-
-nav ul {
-  list-style-type: none; 
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding-left: 0px;
-}
-
-nav > ul > li {
-  flex: 1 1 40px;
-}
-
-
-nav ul li ul li{
-  margin-top: 5px;
-}
-
-nav a{
-  color:#5c00b9;
 }
 
 #position-lab, #grid-lab, #final-project{
@@ -166,5 +176,3 @@ nav a{
 #final-project th {
   width: 50%;
 }
-
-
