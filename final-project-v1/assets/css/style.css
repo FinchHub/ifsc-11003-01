@@ -203,24 +203,37 @@ section#articles article {
   border-radius: 3px;
 }
 
-/* Could not get the image to fit the max width of container class
-*  for nearly two hours. Realized it's because I wasn't targeting
-*  figure before img. This was painful.*/
+.service-block {
+  position: relative;
+  overflow: hidden;
+}
 
 .service-img figure img{
-  border-radius: 3px;
+  border-radius: 5px;
   box-shadow: 5px 5px 8px;
 }
 
 .service-img figure {
   width: 100%;
   margin: auto auto;
+  padding-bottom: 30px;
   position: relative;
 }
 
 .service-text {
- 
+  position: absolute;
+  bottom: 30px;
+  color: white;
+  text-align: center;
+  background: linear-gradient( to top, rgba(0,0,0,1), rgba(0,0,0,.9), rgba(0,0,0,0));
+
+  margin: 0px;
+  padding: 0px 15px;
+  border-radius: 4px;
+  min-width:100%;
 }
+
+.
 
 /* ---------- Careers Page ---------- */
 
