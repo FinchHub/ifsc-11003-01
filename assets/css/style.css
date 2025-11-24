@@ -86,7 +86,10 @@ section#grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
   max-width: 960px;
+}
 
+section#essay {
+  padding-bottom: 0px;
 }
 
 #assignments, #positionlab, #gridlab, #finalproject {
@@ -98,7 +101,7 @@ section#grid {
 
 #assignments ul {
   list-style-type: none;
-  padding: 0px 0px 20px 0px;
+  padding: 0px;
 }
 
 /* Spent a day learning about transitions/transforms and stuff. Practicing it here. */
@@ -205,8 +208,13 @@ table td, table th {
   box-shadow: 0 2px 5px #000;
 }
 
-#note p, #essay p {
-  font-size: 1.2rem;
+#note p {
+  font-size: 1.0rem;
   line-height: 1.6;
 
+}
+
+#essay p {
+  font-size: 1.0rem;
+  line-height: 1.6;
 }
