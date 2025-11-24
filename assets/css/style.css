@@ -82,6 +82,12 @@ header.primary::before {
   z-index: -1;
 }
 
+section#grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  max-width: 960px;
+}
+
 #assignments, #positionlab, #gridlab, #finalproject {
   background: rgba(255,255,255,0.4);
   border-radius: 5px;
@@ -91,7 +97,7 @@ header.primary::before {
 
 #assignments ul {
   list-style-type: none;
-  padding: 0px 40px 20px 40px;
+  padding: 0px 0px 20px 0px;
 }
 
 /* Spent a day learning about transitions/transforms and stuff. Practicing it here. */
