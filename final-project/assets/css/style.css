@@ -57,8 +57,6 @@ body {
   background-color: #BBBBBB;
   font-size: 1.2rem;
 }
-
-
 nav {
   position: sticky;
   top: 0;
@@ -84,14 +82,22 @@ nav ul {
   margin: auto auto;
   padding: 0;
   list-style: none;
+  position: relative;
+}
+
+nav ul li {
+  position: relative;
 }
 
 nav ul a {
+  position: relative;
+  display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1.5rem;
   font-weight: 300;
   color: #FFF;
+  transition: transform 0.2s ease;
 }
 
 nav button, section#hero-content button,
@@ -110,46 +116,6 @@ section#careers button a {
   color: #FFF;
   font-size: 1.2rem;
   font-weight: 300;
-}
-
-section#hero {
-  position: relative;
-  box-shadow: 5px 5px 8px;
-  width:100%;
-  max-height: 80vh;
-  overflow: hidden;
-  border-radius: 3px;
-}
-
-section#hero img {
-  display:block;
-  height: auto;
-}
-
-section#hero-content {
-  position: absolute;
-  top: 25%;
-  left: 2%;
-  text-align: left;
-  color: #FFF;
-  max-width: 35%;
-}
-
-section#hero-content h1 {
-  font-weight: 400;
-  font-size: 2.0rem;
-  text-transform:uppercase;
-  text-align: left;
-}
-
-section#hero-content button {
-  background: #737373;
-  position:relative;
-  margin-top: 0.5rem;
-}
-
-section#hero-content button a {
-  color: #FFF;
 }
 
 
@@ -371,3 +337,97 @@ footer section .footer-bottom h6 {
 footer section .footer-bottom h6 a {
   color: #FFF;
 }
+
+/*  ------------- Media Queries ---------------  */
+
+
+@media only screen and (min-width: 0px) {
+  section#hero {
+    position: relative;
+    box-shadow: 5px 5px 8px;
+    width:100%;
+    max-height: 80vh;
+    overflow: hidden;
+    border-radius: 3px;
+    width: 80vw;
+    margin: 40px auto;
+    max-width: 960px;
+  }
+
+  section#hero img {
+    display:block;
+    height: auto;
+  }
+
+  section#hero-content {
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    text-align: left;
+    color: #FFF;
+    max-width: 35%;
+  }
+
+  section#hero-content h1 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-transform:uppercase;
+    text-align: left;
+  }
+
+  section#hero-content button {
+    background: #737373;
+    position:relative;
+    margin-top: 0.5rem;
+  }
+
+  section#hero-content button a {
+    color: #FFF;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  section#hero {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    border-radius: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  section#hero img {
+    /* remember to make a new pic */
+    content: url('../img/hero-img.webp');
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  section#hero-content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 60%;
+  }
+
+  section#hero-content h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    display: inline-block;
+    text-align: center;
+  }
+
+  section#hero-content button {
+    margin: 0 auto;
+    display: inline-block;
+  }
+
+  section#hero-content button a {
+    font-size: 1.5rem;
+  }
+}
+
