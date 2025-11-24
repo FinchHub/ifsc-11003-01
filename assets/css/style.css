@@ -86,6 +86,7 @@ section#grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
   max-width: 960px;
+
 }
 
 #assignments, #positionlab, #gridlab, #finalproject {
@@ -115,6 +116,7 @@ section#grid {
   color: #7F6599;
   font-weight: 500;
   font-size: 1.2rem;
+  text-align: center;
 }
 
 #assignments ul li:hover {
@@ -127,6 +129,11 @@ h3 {
   font-size: 1.5rem;
   text-align: center;
 }
+
+#essay h3 {
+  margin: 15px auto;
+}
+
 
 table {
   width: 80%;
@@ -184,7 +191,7 @@ table td, table th {
   width: 50%;
 }
 
-#note {
+#note, #essay {
   display: block;
   background: rgba(255, 255, 255, 0.8);
   margin: 0px 100px 40px 100px;
@@ -193,7 +200,12 @@ table td, table th {
   box-shadow: 0px 0px 8px #000;
 }
 
-#note p {
+#essay {
+  margin: 0px 20px 0px 0px;
+  box-shadow: 0 2px 5px #000;
+}
+
+#note p, #essay p {
   font-size: 1.2rem;
   line-height: 1.6;
 
