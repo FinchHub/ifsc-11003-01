@@ -85,10 +85,6 @@ nav img {
 nav ul {
   display:flex;
   gap: 4rem;
-/* I know adding margins aren't the right call for centering, but
- * I've been working on this for hours now and cannot figure out
- * why it refuses to center, so it's there for now. */
-  margin-left: 30px;
   padding: 0;
   list-style: none;
   justify-self: center;
@@ -220,6 +216,7 @@ section#articles article {
 .service-wrapper {
   border-radius: 3px;
   box-shadow: 3px 3px 10px #000;
+  transition: transform 0.2s ease;
 }
 
 .service-description {
@@ -282,6 +279,12 @@ section#articles article {
 .service-text h3 {
   margin-bottom: 5px;
 }
+
+/* Hover animations */
+.service-wrapper:hover {
+  transform: scale(1.02);
+}
+
 
 /* ---------- Careers Page ---------- */
 
@@ -447,7 +450,7 @@ section#hero-content {
   text-align: left;
   color: #FFF;
   max-width: 40%;
-  margin: 15px 0% 15px 2%;
+  margin: 15px 0% 15px 0%;
 }
 
 
@@ -533,12 +536,16 @@ section#hero-content {
     margin: 0 auto;
     display: inline-block;
     margin-bottom: 32px;
+    transition: transform 0.2s ease;
   }
 
   section#hero-content button a {
     font-size: 1.5rem;
   }
 
+  section#hero-content button:hover {
+    transform: scale(1.08);
+  }
 
   section#tagline {
     max-width: 100%;
