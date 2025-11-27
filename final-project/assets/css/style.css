@@ -176,6 +176,7 @@ section#tagline h3 {
 
 
 
+/* REST OF BODY */
 header.container {
   text-align: center;
   color: #FFF;
@@ -544,7 +545,7 @@ section#hero-content {
     width: 100%;
     margin: 0;
     box-shadow: 0px 0px 8px #000;
-    padding: 5px;
+    padding: 25px;
     background-color: #515151;
     color: #FFF;
   }
@@ -555,13 +556,13 @@ section#hero-content {
     /* Honestly have no idea how to use clamp. I ballparked these
     * numbers and got lucky because I was trying to keep h3 on one
     * line until the mobile layout kicked in. */
-    font-size: clamp(1.5rem, 2rem + .8vw, 3rem);
+    font-size: clamp(1.5rem, 2rem + .7vw, 3rem);
   }
 
   section#tagline h3 {
     margin: 5px auto;
     font-weight: 300;
-    max-width: 960px;
+    max-width: 1100px;
   }
 
 }
