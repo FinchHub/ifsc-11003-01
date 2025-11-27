@@ -205,12 +205,38 @@ section#articles article {
   border-radius: 3px;
 }
 
+/* CSS only carousel that I spent some time learning how to
+* do from Kevin Powell's video over at
+* https://www.youtube.com/watch?v=g03Yldh9Nkw. */
+
+section#services {
+  display: grid;
+  border: 1px solid white;
+  grid-auto-flow: column;
+  grid-auto-columns: 40%;
+  gap: 2rem;
+  margin: 50px auto;
+  height: 40vh;
+  max-height: 80vh;
+  overflow-x: auto;
+}
+
+section#services::scroll-button(left) {
+  content: 'left';
+}
+
+section#services::scroll-button(right) {
+  content: 'right';
+}
+
 .service-block {
+  display: grid;
   position: relative;
-  overflow: hidden;
   border-radius: 5px;
   box-shadow: 5px 5px 8px;
+  margin-top: 40px;
   margin-bottom: 40px;
+  overflow: hidden;
 }
 
 .service-img figure img{
@@ -352,7 +378,6 @@ footer section .footer-right ul a{
 
 footer section section {
   display: flex;
-  flex-direction: column;
   align-items: center;
   max-width: 960px;
 }
@@ -438,6 +463,13 @@ section#hero-content {
     max-width: 960px;
     width: 80vw;
     margin: 40px auto;
+    padding: 3px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 3px #000;
+  }
+
+  section#tagline h2 {
+    margin-top: 20px;
   }
 }
 
@@ -476,6 +508,7 @@ section#hero-content {
     border-radius: 3px; 
     box-shadow: 0px 0px 10px rgba(0,0,0,1.0);
     padding: 5px;
+    margin: 15px 0% 15px 2%;
   }
 
   section#hero-content h1 {
@@ -522,5 +555,6 @@ section#hero-content {
     font-weight: 300;
     max-width: 960px;
   }
+
 }
 
