@@ -573,7 +573,7 @@ section#hero-content {
     /* Honestly have no idea how to use clamp. I ballparked these
     * numbers and got lucky because I was trying to keep h3 on one
     * line until the mobile layout kicked in. */
-    font-size: clamp(1.5rem, 2rem + .7vw, 3rem);
+    font-size: clamp(1.5rem, 2rem + .6vw, 3rem);
   }
 
   section#tagline h3 {
