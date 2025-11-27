@@ -54,17 +54,21 @@ body {
   font-family: "roboto";
   margin: 0;
   color:#000;
-  background-color: #BBBBBB;
+  background: #969696;
+  background: linear-gradient(90deg, rgba(150, 150, 150, 1) 0%, rgba(187, 187, 187, 1) 20%, rgba(187, 187, 187, 1) 80%, rgba(150, 150, 150, 1) 100%);
   font-size: 1.2rem;
+
 }
 nav {
   position: sticky;
   top: 0;
-  display: flex;
-  z-index: 1000;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 180px auto 180px;
+  align-items: center;
+  z-index: 100;
   background-color: #515151;
   padding: 0 20px;
+  box-shadow: 0px 0px 8px #000;
 }
 
 nav figure {
@@ -79,10 +83,13 @@ nav img {
 nav ul {
   display:flex;
   gap: 4rem;
-  margin: auto auto;
+/* I know adding margins aren't the right call for centering, but
+ * I've been working on this for hours now and cannot figure out
+ * why it refuses to center, so it's there for now. */
+  margin-left: 30px;
   padding: 0;
   list-style: none;
-  position: relative;
+  justify-self: center;
 }
 
 nav ul li {
@@ -98,7 +105,28 @@ nav ul a {
   font-weight: 300;
   color: #FFF;
   transition: transform 0.2s ease;
+  overflow: hidden;
 }
+
+nav ul a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background-color: #FFF;
+  transition: width 0.3s ease;
+}
+
+nav ul a:hover::after {
+  width: 100%;
+}
+
+nav ul a:hover {
+  transform: scale(1.10);
+}
+
 
 nav button, section#hero-content button,
 section#careers button {
@@ -110,6 +138,11 @@ section#careers button {
   background-color: rgba(255,255,255,0.2);
 }
 
+nav button {
+  max-width: 120px;
+  margin-left: auto;
+}
+
 nav button a, section#hero-content button a,
 section#careers button a {
   text-decoration: none;
@@ -118,6 +151,9 @@ section#careers button a {
   font-weight: 300;
 }
 
+section#tagline {
+  background-color: rgba(0,0,0, 0.2);
+}
 
 section#tagline h2{
   text-align: center; 
@@ -341,32 +377,45 @@ footer section .footer-bottom h6 a {
 /*  ------------- Media Queries ---------------  */
 
 
+/* Wish I would've read about progressive enhancement earlier.
+* If I'd known earlier, I would've started with a mobile layout
+* and built media queries for a desktop layout. I'm not super
+* happy with the mobile layout I've got though, so I'll redesign
+* it at a later date. */
+
 @media only screen and (min-width: 0px) {
-  section#hero {
-    position: relative;
-    box-shadow: 5px 5px 8px;
-    width:100%;
-    max-height: 80vh;
-    overflow: hidden;
-    border-radius: 3px;
-    width: 80vw;
-    margin: 40px auto;
-    max-width: 960px;
-  }
+section#hero {
+  position: relative;
+  box-shadow: 5px 5px 8px;
+  width: 80vw;
+  max-width: 960px;
+  overflow: hidden;
+  border-radius: 3px;
+  margin: 40px auto;
 
-  section#hero img {
-    display:block;
-    height: auto;
-  }
+  display: flex;
+  align-items: center; 
+  justify-content: flex-start; 
+}
 
-  section#hero-content {
-    position: absolute;
-    top: 25%;
-    left: 2%;
-    text-align: left;
-    color: #FFF;
-    max-width: 35%;
-  }
+section#hero img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+section#hero-content {
+  position: relative;   
+  text-align: left;
+  color: #FFF;
+  max-width: 40%;
+  margin: 15px 0% 15px 2%;
+}
+
 
   section#hero-content h1 {
     font-weight: 400;
@@ -384,50 +433,94 @@ footer section .footer-bottom h6 a {
   section#hero-content button a {
     color: #FFF;
   }
+
+  section#tagline {
+    max-width: 960px;
+    width: 80vw;
+    margin: 40px auto;
+  }
 }
+
+
+
 
 @media only screen and (min-width: 992px) {
   section#hero {
     width: 100%;
+    height: 70vh;
     max-width: none;
     margin: 0;
     border-radius: 0;
     position: relative;
     overflow: hidden;
+    box-shadow: 0px 0px 0px;
   }
 
   section#hero img {
-    /* remember to make a new pic */
-    content: url('../img/hero-img.webp');
+    content: url('../img/hero-img-full.webp');
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+    box-shadow: 0px 0px 8px #000;
   }
 
   section#hero-content {
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     max-width: 60%;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 3px; 
+    box-shadow: 0px 0px 10px rgba(0,0,0,1.0);
+    padding: 5px;
   }
 
   section#hero-content h1 {
     font-size: 3rem;
     font-weight: 300;
     margin-bottom: 1rem;
-    display: inline-block;
+    display: block;
     text-align: center;
+    margin-top: 32px;
   }
 
   section#hero-content button {
     margin: 0 auto;
     display: inline-block;
+    margin-bottom: 32px;
   }
 
   section#hero-content button a {
     font-size: 1.5rem;
+  }
+
+
+  section#tagline {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    box-shadow: 0px 0px 8px #000;
+    padding: 5px;
+    background-color: #515151;
+    color: #FFF;
+  }
+
+  section#tagline h2 {
+    margin-top:0;
+    font-weight: 350;
+    /* Honestly have no idea how to use clamp. I ballparked these
+    * numbers and got lucky because I was trying to keep h3 on one
+    * line until the mobile layout kicked in. */
+    font-size: clamp(1.5rem, 2rem + .8vw, 3rem);
+  }
+
+  section#tagline h3 {
+    margin: 5px auto;
+    font-weight: 300;
+    max-width: 960px;
   }
 }
 
