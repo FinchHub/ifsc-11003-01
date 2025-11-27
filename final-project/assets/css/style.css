@@ -58,6 +58,8 @@ body {
   background: linear-gradient(90deg, rgba(150, 150, 150, 1) 0%, rgba(187, 187, 187, 1) 20%, rgba(187, 187, 187, 1) 80%, rgba(150, 150, 150, 1) 100%);
   font-size: 1.2rem;
 
+/* NAVIGATION */
+
 }
 nav {
   position: sticky;
@@ -151,6 +153,8 @@ section#careers button a {
   font-weight: 300;
 }
 
+/* TAGLINE SECTION */
+
 section#tagline {
   background-color: rgba(0,0,0, 0.2);
 }
@@ -170,7 +174,8 @@ section#tagline h3 {
   margin-top: 5px;
 }
 
-/* rest of body */
+
+
 header.container {
   text-align: center;
   color: #FFF;
@@ -205,38 +210,40 @@ section#articles article {
   border-radius: 3px;
 }
 
-/* CSS only carousel that I spent some time learning how to
-* do from Kevin Powell's video over at
-* https://www.youtube.com/watch?v=g03Yldh9Nkw. */
 
-section#services {
-  display: grid;
-  border: 1px solid white;
-  grid-auto-flow: column;
-  grid-auto-columns: 40%;
-  gap: 2rem;
-  margin: 50px auto;
-  height: 40vh;
-  max-height: 80vh;
-  overflow-x: auto;
+/* SERVICE SECTION */
+/* I honestly don't love this at all. I'll come back to it at
+* some point after this class is through, but I intend on overhauling
+* completely. */
+
+.service-wrapper {
+  border-radius: 3px;
+  box-shadow: 3px 3px 10px #000;
 }
 
-section#services::scroll-button(left) {
-  content: 'left';
+.service-description {
+  background: #515151; 
+  margin: 0;
+  border-radius: 0px 0px 3px 3px;
 }
 
-section#services::scroll-button(right) {
-  content: 'right';
+.service-description h4 {
+  margin-top: 0px;
+  padding: 0px 10px 10px 10px;
+
+
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #FFF;
 }
 
 .service-block {
   display: grid;
   position: relative;
-  border-radius: 5px;
-  box-shadow: 5px 5px 8px;
-  margin-top: 40px;
-  margin-bottom: 40px;
   overflow: hidden;
+  margin-bottom: 0px;
+  border-radius: 3px 3px 0px 0px;
 }
 
 .service-img figure img{
@@ -256,7 +263,7 @@ section#services::scroll-button(right) {
   left: 0;
   width: 100%;
   height: 25%;
-  background: linear-gradient( to top, rgba(0,0,0,1), rgba(0,0,0,.7), rgba(0,0,0,0));
+  background: linear-gradient( to top, rgba(81,81,81,1), rgba(81,81,81,.7), rgba(81,81,81,0));
   z-index: 1;
   content: "";
 }
@@ -378,6 +385,7 @@ footer section .footer-right ul a{
 
 footer section section {
   display: flex;
+  flex-direction: column;
   align-items: center;
   max-width: 960px;
 }
