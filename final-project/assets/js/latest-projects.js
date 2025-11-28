@@ -5,7 +5,7 @@ async function populateLatestProjects() {
 
   let html = '';
   try {
-    const res = await fetch('/assets/partials/projects-latest.html', { cache: 'no-cache' });
+    const res = await fetch('/final-project/assets/partials/projects-latest.html', { cache: 'no-cache' });
     if (!res.ok) throw new Error('Partial not found');
     html = await res.text();
   } catch (e) {
