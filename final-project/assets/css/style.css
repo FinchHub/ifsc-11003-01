@@ -365,6 +365,7 @@ footer section .footer-right {
   gap: 0px;
   font-size: 1.5rem;
   align-items: end;
+  text-align: right;
 }
 
 footer section .footer-right h2 {
