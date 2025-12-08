@@ -117,7 +117,7 @@ section#essay {
   transition: transform 0.2s ease;
 }
 
-#assignments ul a li {
+#assignments ul li a{
   display: block;
   color: #7f6599;
   font-weight: 500;
