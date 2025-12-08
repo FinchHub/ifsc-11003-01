@@ -125,8 +125,6 @@ nav ul a:hover {
   transform: scale(1.10);
 }
 
-
-nav button, section#hero-content button,
 section#careers button {
   margin: auto 0px;
   padding: 0px 8px;
@@ -136,12 +134,12 @@ section#careers button {
   background-color: rgba(255,255,255,0.2);
 }
 
-nav button {
+nav btn {
   max-width: 120px;
   margin-left: auto;
 }
 
-nav button a, section#hero-content button a,
+nav a.btn, section#hero-content a.btn,
 section#careers button a {
   text-decoration: none;
   color: #FFF;
@@ -346,7 +344,8 @@ section#careers button a {
   text-align: center;
 }
 
-.back-button a {
+.back-button a,
+.btn {
   color: #FFF;
   background-color: #737373;
   font-family: montserrat;
@@ -360,6 +359,11 @@ section#careers button a {
   border-left: 2px solid #8f8f9d;
   border-bottom: 2px solid #5f5f68;
   border-right: 2px solid #5f5f68;
+}
+
+#nav-btn  {
+  margin-left: auto;
+  max-width: max-content;
 }
 
 .project-container h1 {
@@ -652,18 +656,18 @@ section#hero-content {
     margin-top: 32px;
   }
 
-  section#hero-content button {
+  section#hero-content a.btn {
     margin: 0 auto;
     display: inline-block;
     margin-bottom: 32px;
     transition: transform 0.2s ease;
   }
 
-  section#hero-content button a {
+  section#hero-content a.btn {
     font-size: 1.5rem;
   }
 
-  section#hero-content button:hover {
+  section#hero-content a.btn:hover {
     transform: scale(1.08);
   }
 
