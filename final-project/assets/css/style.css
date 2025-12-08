@@ -663,11 +663,17 @@ section#hero-content {
     transition: transform 0.2s ease;
   }
 
+  #nav-btn {
+    transition: transform 0.2s ease;
+  }
+
+
   section#hero-content a.btn {
     font-size: 1.5rem;
   }
 
-  section#hero-content a.btn:hover {
+  section#hero-content a.btn:hover,
+  #nav-btn:hover {
     transform: scale(1.08);
   }
 
