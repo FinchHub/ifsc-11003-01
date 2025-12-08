@@ -325,16 +325,17 @@ section#coverage li {
   list-style-type: square;
 }
 
-section#careers button {
-  background: #737373;
-  display:block;
-  margin: auto auto;
+#career-btn {
+  display: block;
+  margin: 0 auto;
+  max-width: max-content;
+  transition: transform 0.2s ease;
+  font-size: 1.5rem;
 }
 
-section#careers button a {
-  margin-left: auto;
+#career-btn:hover {
+    transform: scale(1.08);
 }
-
 
 /* ------- Project Pages -------- */
 
